@@ -1,0 +1,15 @@
+# This is the configuration file for the Master
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+secure-file-priv= NULL
+
+# Server ID of the Master
+skip_name_resolve=1
+server-id = 3
+replicate-same-server-id = 0
+auto-increment-increment = 3
+auto-increment-offset = 3
+replicate-do-db = avi_db
+binlog-do-db = avi_db
